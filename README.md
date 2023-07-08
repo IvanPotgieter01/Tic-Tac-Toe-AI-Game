@@ -22,7 +22,7 @@ The AI will use the minimax search algorithm to search a tree of nodes (possible
 
 •	The minimax algorithm evaluates the board state by recursively examining all possible future moves and choosing the one that maximizes the AI player's chance of winning the game.
 
-•	The evaluation function assigns a score to each board state (higher scores indicate a higher chance of winning for the AI player).
+•	The evaluation function assigns a score to each board state higher scores indicate a higher chance of winning for the AI player).
 
 •	Once the best move is determined, the AI makes that move and waits for the player to make their next move.
 
