@@ -100,6 +100,10 @@ We validated the effectiveness of the Minimax algorithm by playing a large numbe
 ### Performance Testing
 Response time was used to gauge the Minimax algorithm's effectiveness. Despite the short game tree of Tic-Tac-Toe, we made sure that the AI's moves were computed quickly enough to provide a good user experience. The performance of the AI was improved by incorporating Alpha-Beta Pruning. This is an important step as the nature of the problem we are trying to solve is educational. Knowing how Alpha-Beta Pruning works is an important step in understanding search techniques and therefore, AI. Even though including search optimisation techniques is not essential in a small search space such as is the case with tic-Tac-Toe, we decided to incorporate it as it is yet another additional AI technique that can be demonstrated in an easy-to-understand fashion.
 
+## Game in action
+![image](https://github.com/IvanPotgieter01/Tic-Tac-Toe-AI-Game/assets/109952133/825f9ced-1aba-4117-87d5-907d34bc77f2)
+
+
 
 
 
