@@ -2,12 +2,12 @@
 AI game implemented using the powerful Minimax search algorithm. The game, Tic Tac Toe, provides an engaging experience for players, with an intelligent AI opponent that utilizes the Minimax algorithm to make optimal moves.
 
 ## Background
-Artificial Intelligence (AI) is growing at an exponential rate, both in popularity and complexity. In order for the concept of AI to be taught to students, a simple AI model is necessitated. This model will showcase the basic concepts of creating and training an AI bot. There exists a need for a basic AI game that demonstrates the uses a popular search algorithm. Such a game would be able to aid in future developments in AI, both in the gaming sector, as well as the field as a whole. Tic-Tac-Toe is a popular game that is simple enough to implement, yet complex enough to demonstrate the use of common AI algorithms like the minimax search algorithm. Due to the game’s popularity, it serves as a great example for learning. This is because the concept is simple and familiar to most. The Tic-Tac-Toe game can also be a fun and engaging way for people (especially students) to interact with and learn about AI. The game will be able to teach students about the concepts of AI, without being overly intimidating (Pilgrim, 1995). 
-Playing Tic-Tac-Toe against an AI player can also offer learning opportunities for players. By observing the AI player's moves, players can learn different strategies and techniques for playing the game. This can enable them to develop their own skills and approaches. This can play an important role in the brain development of young children. The Tic-Tac-Toe game can also serve as a platform for future developments in AI and game design. For example, the game can be used as a test bed for new AI algorithms or game theories. It can also help researchers and designers understand human decision-making processes in games. Researchers can use the algorithms used in Tic-Tac-Toe to build much more complex algorithms to solve complex problems. As discussed in section 1.5, there are various ways in which to make the simple game of Tic-Tac-Toe more complex.
+Artificial Intelligence (AI) is growing at an exponential rate, both in popularity and complexity. In order for the concept of AI to be taught to students, a simple AI model is necessitated. This model will showcase the basic concepts of creating and training an AI bot. There exists a need for a basic AI game that demonstrates the uses a popular search algorithm. Such a game would be able to aid in future developments in AI, both in the gaming sector, as well as the field as a whole. Tic-Tac-Toe is a popular game that is simple enough to implement, yet complex enough to demonstrate the use of common AI algorithms like the minimax search algorithm. Due to the game’s popularity, it serves as a great example for learning. This is because the concept is simple and familiar to most. The Tic-Tac-Toe game can also be a fun and engaging way for people (especially students) to interact with and learn about AI. The game will be able to teach students about the concepts of AI, without being overly intimidating. 
+Playing Tic-Tac-Toe against an AI player can also offer learning opportunities for players. By observing the AI player's moves, players can learn different strategies and techniques for playing the game. This can enable them to develop their own skills and approaches. This can play an important role in the brain development of young children. The Tic-Tac-Toe game can also serve as a platform for future developments in AI and game design. For example, the game can be used as a test bed for new AI algorithms or game theories. It can also help researchers and designers understand human decision-making processes in games. Researchers can use the algorithms used in Tic-Tac-Toe to build much more complex algorithms to solve complex problems.
 
 ![image](https://github.com/IvanPotgieter01/Tic-Tac-Toe-AI-Game/assets/109952133/427f1d9c-031f-48e8-970a-0e282d5b3186)
 
-The AI will use the minimax search algorithm to search a tree of nodes (possible moves) in order to determine the best move to make to maximise its chances of winning the game. If the game has progressed to a point where the AI player can no longer win, it will attempt to prevent its opponent from winning and thereby drawing the game. This strategy perfectly falls in line with what the minimax search algorithm was designed to do. As shown in Figure 2, each possible future game state is generated, for the current game state.  Alpha-beta pruning can be employed in order to speed up the search process (Nasa et al., 2018). This technique will be discussed in more detail in the “Choice of Techniques” section.
+The AI will use the minimax search algorithm to search a tree of nodes (possible moves) in order to determine the best move to make to maximise its chances of winning the game. If the game has progressed to a point where the AI player can no longer win, it will attempt to prevent its opponent from winning and thereby drawing the game. This strategy perfectly falls in line with what the minimax search algorithm was designed to do. As shown in the figure below, each possible future game state is generated, for the current game state.  Alpha-beta pruning can be employed in order to speed up the search process. 
 ![image](https://github.com/IvanPotgieter01/Tic-Tac-Toe-AI-Game/assets/109952133/c3cca6cf-e0f4-4deb-b405-e2ffe33f0c31)
 
 
@@ -36,44 +36,61 @@ The search process for Tic-Tac-Toe happens as follows:
 3.	At each level of the tree, the AI alternates between maximizing and minimizing the score to simulate the possible future moves of the opponent.
 4.	Alpha-beta pruning is used to eliminate unlikely branches, reducing the search space and thereby speeding up the search process. 
 ![image](https://github.com/IvanPotgieter01/Tic-Tac-Toe-AI-Game/assets/109952133/05e2f2e2-8e45-4ec9-8680-d23765446843)
-The operators selected for a game-playing AI have a large impact on the complexity of the search space. This is why the selection of operators is crucial in developing an AI that performs well in a particular game. In games, both speed and accuracy play a cardinal role. Therefore, a balance needs to be achieved between these two important factors. In a relatively simple game such as a 3 × 3 grid Tic-Tac-Toe, there are only a finite number of moves that can be made. Therefore, the search space is quite narrow and the selection of operators less crucial. However, in more complex games such as chess, the selection of operators can have a significant impact on the AI's performance. This is because there are an immense number of possible moves to consider and countless outcomes to evaluate. Therefore, choosing suitable operators will have a very large impact on the algorithm’s game-playing success. The operators in Tic-Tac-Toe are the placement of X's and O's on the 3 × 3 grid. These can be easily represented as strings in the game code.
+The operators selected for a game-playing AI have a large impact on the complexity of the search space. This is why the selection of operators is crucial in developing an AI that performs well in a particular game. In games, both speed and accuracy play a cardinal role. Therefore, a balance needs to be achieved between these two important factors. In a relatively simple game such as a 3 × 3 grid Tic-Tac-Toe, there are only a finite number of moves that can be made. Therefore, the search space is quite narrow and the selection of operators is less crucial. However, in more complex games such as chess, the selection of operators can have a significant impact on the AI's performance. This is because there are an immense number of possible moves to consider and countless outcomes to evaluate. Therefore, choosing suitable operators will have a very large impact on the algorithm’s game-playing success. The operators in Tic-Tac-Toe are the placement of X's and O's on the 3 × 3 grid. These can be easily represented as strings in the game code.
 
 ## Description of program design
 ### Importing modules
 •	The “pygame” module is imported as it is very useful for creating games. This module contains the functionality that is needed to create objects and display the graphics for the game.
+
 •	The “time” module is also imported as it is useful for introducing “pauses” that are sometimes necessary between events in the game. 
 Game initialisation
+
 •	“pygame.init()” initializes all of the imported Pygame modules.
+
 •	A window size of 300 × 300 pixels is established for the game window.
+
 •	Colours are defined as RGB tuples. These provide the basic colours for the game window and text and the game.
+
 •	“pygame.display.set_mode(WINDOW_SIZE)” creates the game window with the above specified dimensions.
+
 •	The font object determines the font and size of the text that will be displayed in the game window.
+
 •	The game variables are initialized: the “player” variable is set to "X" (the human player’s move).
+
 •	At the start of the game, all cells on the board are set as empty (“”).
 ### Drawing the game board
 •	“draw_board()” is a function that draws the 3 × 3 grid on the game window. This grid displays the moves of the players on it. The function uses a nested loop to traverse through each cell in the 3 × 3 grid and draw a black rectangle for each cell. “font.render” renders the text object for the current cell's value ("X", "O" or ""). 
+
 •	Finally “screen.blit” draws the text objects on the game screen.
 Checking if the game is over
+
 •	“check_game_over()” is a function that checks if there is a winner or if the game is a tie. It checks all the possible winning combinations and returns the winner if one exists. Firstly, the function loops over all the rows in the board and checks if there is a row that contains all of the same values (“X’s” or “O’s”). Next, it does the same with the columns and finally with the diagonals. If all cells are filled, but there is no winner, it returns "Tie" as the game has ended in a draw.
 ### Determining the AI player’s move
 •	“ai_turn()” is the function that allows the AI to make its move. It uses the minimax algorithm to determine the optimal move. The function starts by setting a “best_score” as negative infinity, “best_move_i” as -1 and “best_move_j” as -1. These values are placeholders and the actual values will be determined as the function progresses. 
+
 •	“alpha” and “beta” are initialized for the Alpha-Beta pruning that will take place during the execution of the minimax search algorithm. “alpha is the best score (from the perspective of the maximizing player) that is guaranteed at that point in the branch. “beta” is the best score (from the perspective of the minimizing player) that is guaranteed at that point in the branch. Alpha’s initial value is negative infinity, while beta’s initial value is positive infinity. 
+
 •	The variable “best_score” is used to track the highest score from these simulated moves. The function iterates through each cell on the board. When an empty cell is reached, the AI calls the “minimax()” function in order to determine the score of a move made in that specific cell. If this score is higher than the current “best_score”, this becomes the new “best_score”. This process continues until each empty cell has been evaluated. Thereafter, the AI will make the move with the highest score associated with it. This will be the “best” move that the AI can make in order to optimise its chances of winning the game.
 ### The Minimax search algorithm
 •	The “minimax()” function is the heart of the AI's decision-making process. It is a recursive function that simulates all the possible moves that the AI can make in the game. The function rates each of these moves. Based on these ratings, it determines the best move to make. The AI "thinks" ahead and predicts the moves that the human player will make in order to determine its next move after that.
+
 •	The first thing the function does is to check the current state of the game by calling the “check_game_over()” function. If the game is a tie, it will return a 0. If the human player (“X”) has won, it will return -1 and if the AI (“O”) won, it will return 1.
+
 •	If the player is the maximizing player (the AI) the boolean “isMax” is true and the “best_score” will be initialized to a very low value (arbitrarily negative infinity in this case). Next, the function iterates through the game board. If an empty cell is reached, the function will place an “O” in it. Next, it recursively calls the “minimax()” function with an increased depth and it switches to the minimizing player (the human player (“X”)). After the score for that move has been evaluated, the “O” is removed from the board. If a new “best_score” has been achieved, the “best_score” is updated to that value. “alpha” is updated to the best score achievable by the maximizing player. If “beta” is less than or equal to “alpha”, the loop will break as this is the beta cut-off point. This means that the function does not need to calculate scores for any more moves in this branch as they are “pruned”.
+
 •	If the player is the minimizing player (the human player), the function will place an “X” in each cell that it iterates through. Next, it recursively calls the “minimax()” function with an increased depth and it switches to the maximizing player (the AI player (“O”)). After the score for that move has been evaluated, the “X” is removed from the board. If a new “best_score” has been achieved, the “best_score” is updated to that value. “beta” is updated to the best score achievable by the minimizing player. If “beta” is less than or equal to “alpha”, the loop will break as this is the beta cut-off point. This means that the function does not need to calculate scores for any more moves in this branch as they are “pruned”.
+
 •	Finally, the function returns the value of the “best_score”.
 ### The main game loop
 •	The main game loop runs as long as the game is active. Inside this loop, it constantly listens for events, such as mouse clicks (“pygame.MOUSEBUTTONDOWN”) or the game window closing (“pygame.QUIT”). 
+
 •	The human player's moves are handled in response to mouse clicks. After the human player has made their move, the function checks if the game is over. If not, the AI will calculate its own next move and then make it by calling the “ai_turn()” function.
+
 •	After each move, the board is updated with the new values.
 ### Displaying the result
 •	The game state is checked after each move is made. If a win or tie condition is met, the game will end.
+
 •	Once the game ends, it waits 1 second for the final moves to be displayed. The winner can either be the AI or the human player. If there is no winner, the game ends in a tie. After displaying the result, the game quits. The result is displayed on the screen for 3 seconds. The waiting times are managed by the “time.sleep()” function.
-
-
 
 ## 4	Training/Testing Strategy
 ### Initial Testing
