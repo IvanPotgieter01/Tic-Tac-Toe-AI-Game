@@ -1,0 +1,35 @@
+# Tic-Tac-Toe-AI-Game
+AI game implemented using the powerful Minimax search algorithm. The game, Tic Tac Toe, provides an engaging experience for players, with an intelligent AI opponent that utilizes the Minimax algorithm to make optimal moves.
+
+## Background
+Artificial Intelligence (AI) is growing at an exponential rate, both in popularity and complexity. In order for the concept of AI to be taught to students, a simple AI model is necessitated. This model will showcase the basic concepts of creating and training an AI bot. There exists a need for a basic AI game that demonstrates the uses a popular search algorithm. Such a game would be able to aid in future developments in AI, both in the gaming sector, as well as the field as a whole. Tic-Tac-Toe is a popular game that is simple enough to implement, yet complex enough to demonstrate the use of common AI algorithms like the minimax search algorithm. Due to the game’s popularity, it serves as a great example for learning. This is because the concept is simple and familiar to most. The Tic-Tac-Toe game can also be a fun and engaging way for people (especially students) to interact with and learn about AI. The game will be able to teach students about the concepts of AI, without being overly intimidating (Pilgrim, 1995). 
+Playing Tic-Tac-Toe against an AI player can also offer learning opportunities for players. By observing the AI player's moves, players can learn different strategies and techniques for playing the game. This can enable them to develop their own skills and approaches. This can play an important role in the brain development of young children. The Tic-Tac-Toe game can also serve as a platform for future developments in AI and game design. For example, the game can be used as a test bed for new AI algorithms or game theories. It can also help researchers and designers understand human decision-making processes in games. Researchers can use the algorithms used in Tic-Tac-Toe to build much more complex algorithms to solve complex problems. As discussed in section 1.5, there are various ways in which to make the simple game of Tic-Tac-Toe more complex.
+
+![image](https://github.com/IvanPotgieter01/Tic-Tac-Toe-AI-Game/assets/109952133/427f1d9c-031f-48e8-970a-0e282d5b3186)
+
+The AI will use the minimax search algorithm to search a tree of nodes (possible moves) in order to determine the best move to make to maximise its chances of winning the game. If the game has progressed to a point where the AI player can no longer win, it will attempt to prevent its opponent from winning and thereby drawing the game. This strategy perfectly falls in line with what the minimax search algorithm was designed to do. As shown in Figure 2, each possible future game state is generated, for the current game state.  Alpha-beta pruning can be employed in order to speed up the search process (Nasa et al., 2018). This technique will be discussed in more detail in the “Choice of Techniques” section.
+![image](https://github.com/IvanPotgieter01/Tic-Tac-Toe-AI-Game/assets/109952133/c3cca6cf-e0f4-4deb-b405-e2ffe33f0c31)
+
+
+## 2	Choice of Techniques
+•	The board is represented as a list with 9 elements. Each element represents a cell on the board. Since the number of possible moves in Tic-Tac-Toe is quite small, it makes sense to represent each of the 9 blocks on the board as an element.
+•	The board’s initial state is empty, with each cell containing a space character (“”). This falls in line with how the game would be played in real life on paper.
+•	The X player is represented as a string “X”.
+•	The O player is represented as a string “O”.
+•	The AI player uses the minimax algorithm to determine its best move.
+•	The minimax algorithm evaluates the board state by recursively examining all possible future moves and choosing the one that maximizes the AI player's chance of winning the game.
+•	The evaluation function assigns a score to each board state (higher scores indicate a higher chance of winning for the AI player).
+•	Once the best move is determined, the AI makes that move and waits for the player to make their next move.
+
+## Search order and reason for techniques
+The minimax algorithm is a popular recursive algorithm in the game development space. This is because the minimax algorithm takes the possible future moves of its opponent into account. Therefore, it is able to make the best possible move to optimize its chances of winning. The main goal of using the minimax algorithm is to maximize the AI’s chances of winning and minimize the opponent’s chances of winning. By being able to evaluate future states, the AI will be able to make the best possible move. Such a move being one that has the highest chance of resulting in a victory for the AI player. With an increase in game states (for example a larger playing grid), the AI will have an increasing advantage over its human opponent. In order to optimise the search, one approach is to use alpha-beta pruning. This will speed up the search process, as it will eliminate branches that are unlikely to lead to a favourable outcome. This can be seen below in Figure 4. By eliminating nodes to search, the search space is reduced and the search time is reduced. 
+The search process for Tic-Tac-Toe happens as follows:
+1.	The minimax algorithm creates a game tree that represents potential moves and game states. This includes X’s and O’s placed in different positions on the board.
+2.	The AI recursively searches this tree, starting from the current state of the game and working its way down. The leaf nodes of the search tree represent the possible ending states for the game. 
+3.	At each level of the tree, the AI alternates between maximizing and minimizing the score to simulate the possible future moves of the opponent.
+4.	Alpha-beta pruning is used to eliminate unlikely branches, reducing the search space and thereby speeding up the search process. 
+![image](https://github.com/IvanPotgieter01/Tic-Tac-Toe-AI-Game/assets/109952133/05e2f2e2-8e45-4ec9-8680-d23765446843)
+The operators selected for a game-playing AI have a large impact on the complexity of the search space. This is why the selection of operators is crucial in developing an AI that performs well in a particular game. In games, both speed and accuracy play a cardinal role. Therefore, a balance needs to be achieved between these two important factors. In a relatively simple game such as a 3 × 3 grid Tic-Tac-Toe, there are only a finite number of moves that can be made. Therefore, the search space is quite narrow and the selection of operators less crucial. However, in more complex games such as chess, the selection of operators can have a significant impact on the AI's performance. This is because there are an immense number of possible moves to consider and countless outcomes to evaluate. Therefore, choosing suitable operators will have a very large impact on the algorithm’s game-playing success. The operators in Tic-Tac-Toe are the placement of X's and O's on the 3 × 3 grid. These can be easily represented as strings in the game code.
+
+
+
