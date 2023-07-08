@@ -13,12 +13,19 @@ The AI will use the minimax search algorithm to search a tree of nodes (possible
 
 ## Choice of Techniques
 •	The board is represented as a list with 9 elements. Each element represents a cell on the board. Since the number of possible moves in Tic-Tac-Toe is quite small, it makes sense to represent each of the 9 blocks on the board as an element.
+
 •	The board’s initial state is empty, with each cell containing a space character (“”). This falls in line with how the game would be played in real life on paper.
+
 •	The X player is represented as a string “X”.
+
 •	The O player is represented as a string “O”.
+
 •	The AI player uses the minimax algorithm to determine its best move.
+
 •	The minimax algorithm evaluates the board state by recursively examining all possible future moves and choosing the one that maximizes the AI player's chance of winning the game.
+
 •	The evaluation function assigns a score to each board state (higher scores indicate a higher chance of winning for the AI player).
+
 •	Once the best move is determined, the AI makes that move and waits for the player to make their next move.
 
 ## Search order and reason for techniques
